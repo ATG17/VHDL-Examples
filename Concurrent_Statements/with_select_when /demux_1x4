@@ -1,0 +1,32 @@
+library IEEE;
+use library IEEE_STD_LOGIC_1164.ALL;
+
+entity demux_4x1 is 
+  port (
+        a   : in  STD_LOGIC;
+        sel : in  STD_LOGIC_VECTOR (1 downto 0);
+        y0  : out STD_LOGIC;
+        y1  : out STD_LOGIC;
+        y2  : out STD_LOGIC;
+        y3  : out STD_LOGIC
+);
+end demux_1x4;
+
+architecture concurrent of demux_1x4 is
+begin
+    with sel select
+        y0 <= d when "00",
+              '0' when others;
+
+    with sel select
+        y1 <= d when "01",
+              '0' when others;
+
+    with sel select
+        y2 <= d when "10",
+              '0' when others;
+
+    with sel select
+        y3 <= d when "11",
+              '0' when others;
+end concurrent;
