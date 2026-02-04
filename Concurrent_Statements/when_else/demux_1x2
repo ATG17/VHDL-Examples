@@ -1,1 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity demux_1x2 is
+    Port (
+        A   : in  STD_LOGIC;
+        sel : in  STD_LOGIC;
+        X  : out STD_LOGIC;
+        Y  : out STD_LOGIC
+    );
+end demux_1x2;
+
+architecture concurrent of demux_1x2 is
+begin
+    X <= A when sel = '0' else '0';
+    Y <= A when sel = '1' else '0';
+end concurrent;
 
