@@ -1,2 +1,3 @@
 # VHDL-Examples
-VHDL codes covering concurrent statements, sequential statements, and common digital designs.
+This repository is meant for academic practice of VHDL programming and digital circuits.
+
